@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1AF58A90-7EA7-90D7-FE6F-0273349B622C" name="TB_STATUS">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<generatorID>77D8AEBB-0E7E-B176-822D-F1D85FDA842F</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_status" id="CED30A40-71F0-2A91-0B1A-7D5E8FF32DD6">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar o id do status. Ele e obrigatorio e chave primaria.]]></commentInRDBMS>
+<generatorID>68C5C5C5-D55D-9483-1AB6-94315D63C6D8</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_status" id="C0531D71-5A33-49E8-086A-64AEED595C79">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar a descricao do status. Ele e obrigatorio.]]></commentInRDBMS>
+<generatorID>D933ED7F-8539-CBD9-8D27-82512DED1677</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E058CF5F-4E52-2129-A99F-C2CF68E9674A" name="TB_STATUS_PK">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<generatorID>EF0A944A-9ECF-6555-D8BC-379261580E6A</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CED30A40-71F0-2A91-0B1A-7D5E8FF32DD6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

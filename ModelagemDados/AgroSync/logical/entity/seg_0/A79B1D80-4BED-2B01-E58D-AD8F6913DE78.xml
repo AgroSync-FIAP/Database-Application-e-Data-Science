@@ -1,0 +1,142 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A79B1D80-4BED-2B01-E58D-AD8F6913DE78" name="TB_AS_ANALISES">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:29:10 UTC</createdTime>
+<ownerDesignName>AgroSync</ownerDesignName>
+<engineerTo>
+<item key="19DFEE09-1E22-3F16-C8D7-30532D96A33C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_analise" id="986D2A9C-B838-0872-8E78-E653FF413866">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:30:28 UTC</createdTime>
+<ownerDesignName>AgroSync</ownerDesignName>
+<engineerTo>
+<item key="19DFEE09-1E22-3F16-C8D7-30532D96A33C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_local" id="CBF300A0-838E-8689-F341-71805FC73B1D">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:30:12 UTC</createdTime>
+<generatorID>121AE9C5-2E0E-99A1-B015-98799295148E</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<engineerTo>
+<item key="19DFEE09-1E22-3F16-C8D7-30532D96A33C" value="true"/>
+</engineerTo>
+<referedAttribute>D961D249-1F11-B6A9-12D1-BE330D041114</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_status" id="71163173-D28E-FCE7-908A-30DFF7C85D45">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:49:43 UTC</createdTime>
+<generatorID>A08E302B-2A74-3871-3935-BD74B8E9F19B</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<engineerTo>
+<item key="19DFEE09-1E22-3F16-C8D7-30532D96A33C" value="true"/>
+</engineerTo>
+<referedAttribute>68C5C5C5-D55D-9483-1AB6-94315D63C6D8</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_planta" id="8AAE1A1F-1722-2D04-B6AA-25ED1AC3AA2B">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:54:50 UTC</createdTime>
+<generatorID>56E7C3CC-D340-A644-1FF7-9B2859284DE2</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<engineerTo>
+<item key="19DFEE09-1E22-3F16-C8D7-30532D96A33C" value="true"/>
+</engineerTo>
+<referedAttribute>C9DCD12C-E0F6-E8E4-2112-33F26B32ED52</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cm_imagem" id="08A592CA-79C0-6117-62B8-53BFBDE5DFAE">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:37:20 UTC</createdTime>
+<ownerDesignName>AgroSync</ownerDesignName>
+<engineerTo>
+<item key="19DFEE09-1E22-3F16-C8D7-30532D96A33C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>75</dataTypeSize>
+<ownDataTypeParameters>75,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_problema" id="7F037031-3239-C805-5F7E-1D9ABFBE7DCF">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:31:44 UTC</createdTime>
+<ownerDesignName>AgroSync</ownerDesignName>
+<engineerTo>
+<item key="19DFEE09-1E22-3F16-C8D7-30532D96A33C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_solucao" id="74AE376D-4169-547A-A972-BBB4A58D1C46">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:39:17 UTC</createdTime>
+<ownerDesignName>AgroSync</ownerDesignName>
+<engineerTo>
+<item key="19DFEE09-1E22-3F16-C8D7-30532D96A33C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_registro" id="B4145589-45E3-D449-FE28-77AF093BB956">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:32:05 UTC</createdTime>
+<ownerDesignName>AgroSync</ownerDesignName>
+<engineerTo>
+<item key="19DFEE09-1E22-3F16-C8D7-30532D96A33C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="98F12D6E-9E9C-668E-4B4E-8A55769AC8F4" name="TB_AS_ANALISES PK">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:30:54 UTC</createdTime>
+<ownerDesignName>AgroSync</ownerDesignName>
+<engineerTo>
+<item key="19DFEE09-1E22-3F16-C8D7-30532D96A33C" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>986D2A9C-B838-0872-8E78-E653FF413866</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

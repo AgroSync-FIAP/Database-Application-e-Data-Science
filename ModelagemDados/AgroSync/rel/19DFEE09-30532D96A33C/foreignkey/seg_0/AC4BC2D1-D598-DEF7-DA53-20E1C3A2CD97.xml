@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="AC4BC2D1-D598-DEF7-DA53-20E1C3A2CD97" containerWithKeyObject="606A76B9-5477-A376-9AE7-D7F8E5B0AD91" localFKIndex="14C24063-3A94-C9F4-9D3F-FA66636566CD" name="TB_USUARIO_TELEFONE_FK">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<generatorID>B69197F9-12C2-C107-BFD4-90E4FA09AE6B</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<referredTableLongName>TB_AS_TELEFONE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>EFCB4092-7A14-CF29-36AE-82AAC0A92FD2</referredTableID>
+<keyObject>3BAD6FDC-A04C-372C-49B5-6561AA130E04</keyObject>
+<referredKeyID>3BAD6FDC-A04C-372C-49B5-6561AA130E04</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_telefone</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

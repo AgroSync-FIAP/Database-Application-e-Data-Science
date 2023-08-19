@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EFCB4092-7A14-CF29-36AE-82AAC0A92FD2" name="TB_AS_TELEFONE">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<generatorID>0BB9B10C-818D-2BB7-7F52-A8636D57E228</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_telefone" id="340F55B1-FEE8-2276-A6C9-623C4E926492">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar o id do telefone. Ele e obrigatorio e chave primaria.]]></commentInRDBMS>
+<generatorID>8D5D1CD9-CFF7-CA3D-0CF0-5ABD516CD74C</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nr_ddi" id="CF334C31-5C5D-AEB1-B99B-D3D4F03ED2AB">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar o ddi do telefone. Ele e obrigatorio]]></commentInRDBMS>
+<generatorID>18133D80-74D1-7958-3B5D-27E0C769D7D8</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nr_ddd" id="A117AD9F-2E60-97E5-4735-9BAE41809745">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar o ddd do telefone. Ele e obrigatorio.]]></commentInRDBMS>
+<generatorID>C83BD241-97C6-1624-F752-3944F2AA4AF0</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nr_telefone" id="0D65A781-E707-77B5-9D45-2C68BDF51070">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar o número do telefone. Ele e obrigatorio.]]></commentInRDBMS>
+<generatorID>5864366A-2F83-8544-174A-9AB9EE1E57A1</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3BAD6FDC-A04C-372C-49B5-6561AA130E04" name="TB_AS_TELEFONE_PK">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<generatorID>DC0D61CB-4B94-E6EE-9830-770D81867971</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="340F55B1-FEE8-2276-A6C9-623C4E926492"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK_USUARIO_TELEFONE" directorySegmentName="seg_0" id="B69197F9-12C2-C107-BFD4-90E4FA09AE6B">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:01:58 UTC</createdTime>
+<ownerDesignName>AgroSync</ownerDesignName>
+<engineerTo>
+<item key="19DFEE09-1E22-3F16-C8D7-30532D96A33C" value="true"/>
+</engineerTo>
+<sourcePk>DC0D61CB-4B94-E6EE-9830-770D81867971</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>0BB9B10C-818D-2BB7-7F52-A8636D57E228</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>4BB8725C-ACCD-76E6-DC71-B221A528B670</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

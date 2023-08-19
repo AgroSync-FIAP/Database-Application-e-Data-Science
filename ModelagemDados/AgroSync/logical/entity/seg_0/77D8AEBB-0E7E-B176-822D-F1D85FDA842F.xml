@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="77D8AEBB-0E7E-B176-822D-F1D85FDA842F" name="TB_STATUS">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:48:06 UTC</createdTime>
+<ownerDesignName>AgroSync</ownerDesignName>
+<engineerTo>
+<item key="19DFEE09-1E22-3F16-C8D7-30532D96A33C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_status" id="68C5C5C5-D55D-9483-1AB6-94315D63C6D8">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:48:17 UTC</createdTime>
+<ownerDesignName>AgroSync</ownerDesignName>
+<engineerTo>
+<item key="19DFEE09-1E22-3F16-C8D7-30532D96A33C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_status" id="D933ED7F-8539-CBD9-8D27-82512DED1677">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:48:30 UTC</createdTime>
+<ownerDesignName>AgroSync</ownerDesignName>
+<engineerTo>
+<item key="19DFEE09-1E22-3F16-C8D7-30532D96A33C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="EF0A944A-9ECF-6555-D8BC-379261580E6A" name="TB_ANALISES_STATUS PK">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:49:17 UTC</createdTime>
+<ownerDesignName>AgroSync</ownerDesignName>
+<engineerTo>
+<item key="19DFEE09-1E22-3F16-C8D7-30532D96A33C" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>68C5C5C5-D55D-9483-1AB6-94315D63C6D8</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

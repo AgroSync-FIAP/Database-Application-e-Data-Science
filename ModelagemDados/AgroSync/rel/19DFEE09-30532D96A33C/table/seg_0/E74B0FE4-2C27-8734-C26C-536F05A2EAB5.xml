@@ -1,0 +1,95 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E74B0FE4-2C27-8734-C26C-536F05A2EAB5" name="TB_PLANTA">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<generatorID>20747253-5042-2054-A409-444D51E9BB9B</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<ordsAlias>tb_plantas</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_planta" id="0B988E62-5A63-9A2D-D204-54BEB04FABB4">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar o id da planta. Ele e obrigatorio e chave primaria.]]></commentInRDBMS>
+<generatorID>C9DCD12C-E0F6-E8E4-2112-33F26B32ED52</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_comum" id="6CF29CAA-2224-2310-7114-CA2F7C79E359">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar o nome comum da planta.  Ele e obrigatorio]]></commentInRDBMS>
+<generatorID>A5B1CA64-3A32-1CBC-DB78-89BD3FE54E76</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_cientifico" id="9CC78B6F-80CF-4DBC-4DFA-A0581EAA8784">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar o nome cientifico da planta.]]></commentInRDBMS>
+<generatorID>3645DC55-7E95-9D81-5F4D-306684716E89</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_planta" id="485E7805-D39F-78B4-9F34-00BA5933FCF2">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar a descricao da planta.]]></commentInRDBMS>
+<generatorID>63F26562-F09E-80B2-80BF-FA32895872A6</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cuidados_gerais" id="72828759-F96B-6716-C7FD-1C8F5574900F">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar os cuidados gerais da planta.]]></commentInRDBMS>
+<generatorID>8E828F8D-9577-31D2-260B-6C0A370E10C8</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D186EA1B-DD30-E402-4A0B-07AF22993C9A" name="TB_PLANTAS_PK">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<generatorID>CD1CC52E-7B9B-849D-1727-0187BDD8791F</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0B988E62-5A63-9A2D-D204-54BEB04FABB4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

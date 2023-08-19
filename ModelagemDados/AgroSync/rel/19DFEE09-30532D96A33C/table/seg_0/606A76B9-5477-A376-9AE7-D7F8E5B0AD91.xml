@@ -1,0 +1,170 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="606A76B9-5477-A376-9AE7-D7F8E5B0AD91" name="TB_AS_USUARIO">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<generatorID>4BB8725C-ACCD-76E6-DC71-B221A528B670</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_usuario" id="219771E5-688E-CBD9-F7FF-A32734AC6E91">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar o id do usuário. Ele e obrigatorio e chave primaria.]]></commentInRDBMS>
+<generatorID>E2DBCE45-3719-4CC5-8729-6F2A6B10598E</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_telefone" id="07D124BE-C0F1-CE97-B7B5-6BE3BCF6B1E9">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar o id do telefone do usuario. Ele e obrigatorio e chave estrangeira.]]></commentInRDBMS>
+<generatorID>7F76E990-C07C-C9B6-AAC9-CC5ED22E4EB6</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AC4BC2D1-D598-DEF7-DA53-20E1C3A2CD97" referredColumn="340F55B1-FEE8-2276-A6C9-623C4E926492"/>
+</associations>
+</Column>
+<Column name="email" id="5D45922A-F332-C3BE-93F8-86466BC93F7E">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar o email do usuario e sera usado como login. Ele e obrigatorio.]]></commentInRDBMS>
+<generatorID>240BBADC-0E45-C203-975B-DFCE7A777A4A</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="senha" id="2AE0CA42-3442-2CCF-E7B1-8F0CB69683EE">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar a senha do usuario e sera usado como senha para o  login. Ele e obrigatorio.]]></commentInRDBMS>
+<generatorID>3FDC0228-B857-7DE2-6735-9E0E295E8280</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nome" id="5F52E402-E6F8-5E59-F97C-51080B163518">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar o nome do usuario. Ele e obrigatorio.]]></commentInRDBMS>
+<generatorID>75CC710F-009F-944C-8A46-D890D2B2F748</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cpf_cnpj" id="A5B7AA19-ED47-9708-F2B9-461EAB6F0383">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar o cpd ou cnpj do usuario. Ele e obrigatorio.]]></commentInRDBMS>
+<generatorID>E97E749A-2319-DD13-2B7D-327ABEE5EC83</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>14,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="genero" id="2CA91B91-8435-2605-7701-DB337402FDE0">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar o genero do usuario. Ele e obrigatorio.]]></commentInRDBMS>
+<generatorID>8A5D6FC8-675E-02FB-6D42-F4C2ABF2658F</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_nascimento" id="DD31C7CC-95AC-EA2F-A7CF-8A7FECF5B547">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar a data de nascimento do usuario. Ele e obrigatorio.]]></commentInRDBMS>
+<generatorID>BD155E85-F747-13B9-1CD7-E74E4019BF33</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cm_img_perfil" id="F79AEDA5-BE2B-ED57-4594-E48C046BCD46">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar o caminho da foto de perfil do usuario.]]></commentInRDBMS>
+<generatorID>B026E828-A487-C6ED-C542-9C0BFBEC8DCE</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>75</dataTypeSize>
+<ownDataTypeParameters>75,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_registro" id="E067DA61-DE76-87C9-D0DB-FAD1141A49EF">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar a data de registro do usuario. Ele e obrigatorio.]]></commentInRDBMS>
+<generatorID>4AA77290-C889-6A99-81A0-A588B47D24B6</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9873BC57-61F2-5807-0CDA-CF5BFEBEFF26" name="TB_AS_USUARIO_PK">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<generatorID>625BFF9E-A543-172E-2D57-980C386E3DF7</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="219771E5-688E-CBD9-F7FF-A32734AC6E91"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="14C24063-3A94-C9F4-9D3F-FA66636566CD" name="TB_USUARIO_TELEFONE_FK">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<generatorID>B69197F9-12C2-C107-BFD4-90E4FA09AE6B</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="07D124BE-C0F1-CE97-B7B5-6BE3BCF6B1E9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

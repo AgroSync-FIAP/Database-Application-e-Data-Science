@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="80C9E43A-AFD6-2BBA-B106-E5C76CD91BB2">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 02:41:26 UTC</createdTime>
+<ownerDesignName>AgroSync</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</ProcessModel>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK_LOCAL_ANALISES" directorySegmentName="seg_0" id="121AE9C5-2E0E-99A1-B015-98799295148E">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:30:12 UTC</createdTime>
+<ownerDesignName>AgroSync</ownerDesignName>
+<engineerTo>
+<item key="19DFEE09-1E22-3F16-C8D7-30532D96A33C" value="true"/>
+</engineerTo>
+<sourcePk>378F76D1-54C2-AED4-1881-39F17582E019</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>3F740967-932D-CA84-33ED-41B13E58422C</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>A79B1D80-4BED-2B01-E58D-AD8F6913DE78</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

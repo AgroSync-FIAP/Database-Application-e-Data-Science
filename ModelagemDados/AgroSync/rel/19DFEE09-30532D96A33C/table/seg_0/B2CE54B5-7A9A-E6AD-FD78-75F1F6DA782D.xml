@@ -1,0 +1,175 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B2CE54B5-7A9A-E6AD-FD78-75F1F6DA782D" name="TB_AS_ANALISE">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<generatorID>A79B1D80-4BED-2B01-E58D-AD8F6913DE78</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<ordsAlias>tb_as_analises</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_analise" id="5337692F-A521-3F5E-6621-4F963DB217CB">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar o id da analise. Ele e obrigatorio e chave primaria.]]></commentInRDBMS>
+<generatorID>986D2A9C-B838-0872-8E78-E653FF413866</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_local" id="2DF50993-7920-6FFE-209C-9CDAA702B9A5">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar o id do local. Ele e obrigatorio e chave estrageira.]]></commentInRDBMS>
+<generatorID>CBF300A0-838E-8689-F341-71805FC73B1D</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D3F79BAB-2D21-D80D-AB0C-7E150CE7F60E" referredColumn="53942B99-BBAA-E656-99F8-4C38DA8E2348"/>
+</associations>
+</Column>
+<Column name="id_status" id="E1003E90-A59C-0465-297F-353340CC788D">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar o id do status. Ele e obrigatorio e chave estrageira.]]></commentInRDBMS>
+<generatorID>71163173-D28E-FCE7-908A-30DFF7C85D45</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A8575C8B-B3DD-A9E1-4384-3B04A615B3CD" referredColumn="CED30A40-71F0-2A91-0B1A-7D5E8FF32DD6"/>
+</associations>
+</Column>
+<Column name="id_planta" id="B0B27B40-D67A-F682-DD21-97935DEC9D77">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar o id da planta. Ele e obrigatorio e chave estrageira.]]></commentInRDBMS>
+<generatorID>8AAE1A1F-1722-2D04-B6AA-25ED1AC3AA2B</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C25006E8-DD5F-F1A8-0060-EC5379A9F4E7" referredColumn="0B988E62-5A63-9A2D-D204-54BEB04FABB4"/>
+</associations>
+</Column>
+<Column name="cm_imagem" id="0F311EA0-30D7-3BC7-E32B-52D7E70A4B2E">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar o caminho da imagem da analise. Ele e obrigatorio.]]></commentInRDBMS>
+<generatorID>08A592CA-79C0-6117-62B8-53BFBDE5DFAE</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>75</dataTypeSize>
+<ownDataTypeParameters>75,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_problema" id="D2C0ADA5-2956-1E54-10CC-5C3AFDD2D526">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar a descrição da analise. Ele e obrigatorio.]]></commentInRDBMS>
+<generatorID>7F037031-3239-C805-5F7E-1D9ABFBE7DCF</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_solucao" id="0CD82296-FC95-F4AD-64FA-DCA4B9F09B21">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar a descrição da solucao. Ele e obrigatorio.]]></commentInRDBMS>
+<generatorID>74AE376D-4169-547A-A972-BBB4A58D1C46</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_registro" id="421D1258-03F3-F13A-2C4B-A0F741E9C01D">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Este campo sera para armazenar a data de registro da solucao. Ele e obrigatorio.]]></commentInRDBMS>
+<generatorID>B4145589-45E3-D449-FE28-77AF093BB956</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6BBC1426-0B00-3F01-70A4-15C0E1DDBD2F" name="TB_AS_ANALISES_PK">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<generatorID>98F12D6E-9E9C-668E-4B4E-8A55769AC8F4</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5337692F-A521-3F5E-6621-4F963DB217CB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DB917353-6349-3566-71F5-4AF40FE1D3FB" name="TB_AS_ANALISES_TB_PLANTAS_FK">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<generatorID>56E7C3CC-D340-A644-1FF7-9B2859284DE2</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B0B27B40-D67A-F682-DD21-97935DEC9D77"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="14B3EB37-FC82-69C1-4131-64F710773C3E" name="TB_AS_ANALISES_TB_STATUS_FK">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<generatorID>A08E302B-2A74-3871-3935-BD74B8E9F19B</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E1003E90-A59C-0465-297F-353340CC788D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E6487006-B395-4D85-88AF-2E09614C79F2" name="TB_AS_ANALISES_TB_AS_LOCAL_FK">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<generatorID>121AE9C5-2E0E-99A1-B015-98799295148E</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2DF50993-7920-6FFE-209C-9CDAA702B9A5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

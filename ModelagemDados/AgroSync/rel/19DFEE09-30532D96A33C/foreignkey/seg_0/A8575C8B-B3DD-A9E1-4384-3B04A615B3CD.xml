@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A8575C8B-B3DD-A9E1-4384-3B04A615B3CD" containerWithKeyObject="B2CE54B5-7A9A-E6AD-FD78-75F1F6DA782D" localFKIndex="14B3EB37-FC82-69C1-4131-64F710773C3E" name="TB_AS_ANALISES_TB_STATUS_FK">
+<createdBy>Vini Oliveira</createdBy>
+<createdTime>2023-08-18 03:56:58 UTC</createdTime>
+<generatorID>A08E302B-2A74-3871-3935-BD74B8E9F19B</generatorID>
+<ownerDesignName>AgroSync</ownerDesignName>
+<referredTableLongName>TB_STATUS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>1AF58A90-7EA7-90D7-FE6F-0273349B622C</referredTableID>
+<keyObject>E058CF5F-4E52-2129-A99F-C2CF68E9674A</keyObject>
+<referredKeyID>E058CF5F-4E52-2129-A99F-C2CF68E9674A</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_status</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
