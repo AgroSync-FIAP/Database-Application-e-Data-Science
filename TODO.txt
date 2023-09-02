@@ -1,0 +1,35 @@
+- Inserts inicias para poupular as tabelas, irei utilizar o chatgpt para realizer esses Inserts.
+
+- Querys para analises de dados, pelo menos uma deve constar INNER JOIN e outra GORUP BY.
+
+    * Tabelas *
+
+        - Tabela de auditoria (nm_usuario VARCHAR2(30), dt_hora DATE, id NUMBER(5), acao_realizada VARCHAR2(10), tabela_afetada VARCHAR2(50))
+    
+    * Sequences *
+
+
+    * Comando DML *
+
+        - Inserção de pelo menos 5 linhas de dados por tabela.
+        - Realizaçãode pelo menos duas instruçõesde atualização de dados 
+
+    * Comando DQL *
+
+        - Uma query deve utilizar obrigatoriamenteINNER JOIN
+        - Uma query deve utilizar obrigatoriamenteagrupamento(GROUP BY)
+
+    * Procedures *
+
+        - Uma procedure que irá inserir um usuário, junto com o telefone
+        - Uma procedure de cadastro de locais do usuário
+        - Uma procedure cadastro de análises
+
+    * Function *
+
+        - Função para retornar a quantidade de analises com o status passado como parâmetro
+        - Função para retornar a solução de uma analise que contenha uma string na descrição do problema
+
+    * Triggers *
+
+        -  Trigger para popular a tabela de auditoria.

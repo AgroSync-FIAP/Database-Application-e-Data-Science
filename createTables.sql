@@ -157,7 +157,7 @@ COMMENT ON COLUMN tb_as_usuario.dt_registro IS
 
 ALTER TABLE tb_as_usuario ADD CONSTRAINT tb_as_usuario_pk PRIMARY KEY ( id_usuario );
 
-CREATE TABLE tb_planta (
+CREATE TABLE tb_as_planta (
     id_planta       NUMBER(5) NOT NULL,
     nm_comum        VARCHAR2(50) NOT NULL,
     nm_cientifico   VARCHAR2(50),
@@ -165,47 +165,47 @@ CREATE TABLE tb_planta (
     cuidados_gerais VARCHAR2(100)
 );
 
-COMMENT ON COLUMN tb_planta.id_planta IS
+COMMENT ON COLUMN tb_as_planta.id_planta IS
     'Este campo sera para armazenar o id da planta. Ele e obrigatorio e chave primaria.';
 
-COMMENT ON COLUMN tb_planta.nm_comum IS
+COMMENT ON COLUMN tb_as_planta.nm_comum IS
     'Este campo sera para armazenar o nome comum da planta.  Ele e obrigatorio';
 
-COMMENT ON COLUMN tb_planta.nm_cientifico IS
+COMMENT ON COLUMN tb_as_planta.nm_cientifico IS
     'Este campo sera para armazenar o nome cientifico da planta.';
 
-COMMENT ON COLUMN tb_planta.ds_planta IS
+COMMENT ON COLUMN tb_as_planta.ds_planta IS
     'Este campo sera para armazenar a descricao da planta.';
 
-COMMENT ON COLUMN tb_planta.cuidados_gerais IS
+COMMENT ON COLUMN tb_as_planta.cuidados_gerais IS
     'Este campo sera para armazenar os cuidados gerais da planta.';
 
-ALTER TABLE tb_planta ADD CONSTRAINT tb_plantas_pk PRIMARY KEY ( id_planta );
+ALTER TABLE tb_as_planta ADD CONSTRAINT tb_as_plantas_pk PRIMARY KEY ( id_planta );
 
-CREATE TABLE tb_status (
+CREATE TABLE tb_as_status (
     id_status NUMBER(5) NOT NULL,
     ds_status VARCHAR2(20) NOT NULL
 );
 
-COMMENT ON COLUMN tb_status.id_status IS
+COMMENT ON COLUMN tb_as_status.id_status IS
     'Este campo sera para armazenar o id do status. Ele e obrigatorio e chave primaria.';
 
-COMMENT ON COLUMN tb_status.ds_status IS
+COMMENT ON COLUMN tb_as_status.ds_status IS
     'Este campo sera para armazenar a descricao do status. Ele e obrigatorio.';
 
-ALTER TABLE tb_status ADD CONSTRAINT tb_status_pk PRIMARY KEY ( id_status );
+ALTER TABLE tb_as_status ADD CONSTRAINT tb_as_status_pk PRIMARY KEY ( id_status );
 
 ALTER TABLE tb_as_analise
     ADD CONSTRAINT tb_as_analises_tb_as_local_fk FOREIGN KEY ( id_local )
         REFERENCES tb_as_local ( id_local );
 
 ALTER TABLE tb_as_analise
-    ADD CONSTRAINT tb_as_analises_tb_plantas_fk FOREIGN KEY ( id_planta )
-        REFERENCES tb_planta ( id_planta );
+    ADD CONSTRAINT tb_as_analises_tb_as_plantas_fk FOREIGN KEY ( id_planta )
+        REFERENCES tb_as_planta ( id_planta );
 
 ALTER TABLE tb_as_analise
-    ADD CONSTRAINT tb_as_analises_tb_status_fk FOREIGN KEY ( id_status )
-        REFERENCES tb_status ( id_status );
+    ADD CONSTRAINT tb_as_analises_tb_as_status_fk FOREIGN KEY ( id_status )
+        REFERENCES tb_as_status ( id_status );
 
 ALTER TABLE tb_as_local
     ADD CONSTRAINT tb_as_local_tb_as_usuario_fk FOREIGN KEY ( id_usuario )
@@ -214,6 +214,15 @@ ALTER TABLE tb_as_local
 ALTER TABLE tb_as_usuario
     ADD CONSTRAINT tb_usuario_telefone_fk FOREIGN KEY ( id_telefone )
         REFERENCES tb_as_telefone ( id_telefone );
+
+CREATE TABLE tb_as_auditoria (
+    id_registro NUMBER(5),
+    nm_usuario VARCHAR2(30),
+    dt_hora DATE,
+    acao_realizada VARCHAR2(10),
+    tabela_afetada VARCHAR2(50)
+);
+
 
 
 
