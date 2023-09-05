@@ -1,3 +1,23 @@
+-- Removendo tabelas e sequences 
+
+DROP TABLE tb_as_analise CASCADE CONSTRAINTS;
+DROP TABLE tb_as_local CASCADE CONSTRAINTS;
+DROP TABLE tb_as_telefone CASCADE CONSTRAINTS;
+DROP TABLE tb_as_usuario CASCADE CONSTRAINTS;
+DROP TABLE tb_as_planta CASCADE CONSTRAINTS;
+DROP TABLE tb_as_status CASCADE CONSTRAINTS;
+DROP TABLE tb_as_auditoria CASCADE CONSTRAINTS;
+
+DROP SEQUENCE seq_id_analise;
+DROP SEQUENCE seq_id_local;
+DROP SEQUENCE seq_id_telefone;
+DROP SEQUENCE seq_id_usuario;
+DROP SEQUENCE seq_id_planta;
+DROP SEQUENCE seq_id_status;
+DROP SEQUENCE seq_id_registro;
+
+-- Criação de tabelas e sequences
+
 -- Gerado por Oracle SQL Developer Data Modeler 22.2.0.165.1149
 --   em:        2023-08-19 12:32:53 BRT
 --   site:      Oracle Database 11g
@@ -222,6 +242,34 @@ CREATE TABLE tb_as_auditoria (
     acao_realizada VARCHAR2(10),
     tabela_afetada VARCHAR2(50)
 );
+
+CREATE SEQUENCE seq_id_analise
+    START WITH 1
+    INCREMENT BY 1;
+
+CREATE SEQUENCE seq_id_local
+    START WITH 1
+    INCREMENT BY 1;
+
+CREATE SEQUENCE seq_id_telefone
+    START WITH 1
+    INCREMENT BY 1;
+
+CREATE SEQUENCE seq_id_usuario
+    START WITH 1
+    INCREMENT BY 1;
+
+CREATE SEQUENCE seq_id_planta
+    START WITH 1
+    INCREMENT BY 1;
+
+CREATE SEQUENCE seq_id_status
+    START WITH 1
+    INCREMENT BY 1;
+
+CREATE SEQUENCE seq_id_registro
+    START WITH 1
+    INCREMENT BY 1;
 
 
 
