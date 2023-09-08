@@ -36,7 +36,7 @@ CREATE TABLE tb_as_analise (
     id_planta   NUMBER(5) NOT NULL,
     cm_imagem   VARCHAR2(75) NOT NULL,
     ds_problema VARCHAR2(200) NOT NULL,
-    ds_solucao  VARCHAR2(200) NOT NULL,
+    ds_solucao  VARCHAR2(200),
     dt_registro DATE NOT NULL
 );
 
