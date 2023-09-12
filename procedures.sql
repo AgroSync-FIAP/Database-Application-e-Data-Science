@@ -1,6 +1,6 @@
 SET SERVEROUTPUT ON;
 
--- Procedure para cadastrar um usu�rio junto com o telefone dele
+-- Procedure para cadastrar um usuario junto com o telefone dele
 
 CREATE OR REPLACE PROCEDURE PRC_CADASTRO_USUARIO (
     p_email IN VARCHAR2,
@@ -16,6 +16,10 @@ CREATE OR REPLACE PROCEDURE PRC_CADASTRO_USUARIO (
 ) IS
 
     idTelefone NUMBER;
+
+    v_codigo_erro NUMBER;
+    v_mensagem_erro VARCHAR2(250);
+
 BEGIN 
 
 
@@ -30,12 +34,12 @@ BEGIN
     
     IF p_genero != 'M' 
     AND p_genero != 'F' THEN
-        RAISE_APPLICATION_ERROR(-20003, 'O valor de gen�ro deve ser M (Masculino) ou F (Feminino).');
+        RAISE_APPLICATION_ERROR(-20003, 'O valor de genero deve ser M (Masculino) ou F (Feminino).');
     END IF;
     
     IF INSTR(UPPER(p_cm_img_perfil), '.PNG') = 0 
     AND INSTR(UPPER(p_cm_img_perfil), '.JPEG') = 0 THEN    
-        RAISE_APPLICATION_ERROR(-20004, 'Os formatos de imagem permitos s�o: png ou jpeg.');
+        RAISE_APPLICATION_ERROR(-20004, 'Os formatos de imagem permitos sao: png ou jpeg.');
     END IF;
     
 
@@ -50,16 +54,40 @@ BEGIN
 EXCEPTION
 
     WHEN DUP_VAL_ON_INDEX THEN
-        DBMS_OUTPUT.PUT_LINE('Erro: Valor duplicado em coluna �nica.');
+        DBMS_OUTPUT.PUT_LINE('Erro: Valor duplicado em coluna unica.');
+
+        v_codigo_erro := SQLCODE;
+        v_mensagem_erro := SQLERRM;
+        
+        INSERT INTO TB_AS_ERRO (ID_ERRO, CD_ERRO, NM_ERRO, DT_REGISTRO, USUARIO, PROCEDIMENTO)
+        VALUES (seq_id_erro.NEXTVAL, v_codigo_erro, v_mensagem_erro, SYSDATE, USER, 'PRC_CADASTRO_USUARIO');
         
     WHEN NO_DATA_FOUND THEN
-        DBMS_OUTPUT.PUT_LINE('Erro: Chave estrangeira n�o encontrada.');
+        DBMS_OUTPUT.PUT_LINE('Erro: Chave estrangeira nao encontrada.');
+
+        v_codigo_erro := SQLCODE;
+        v_mensagem_erro := SQLERRM;
+        
+        INSERT INTO TB_AS_ERRO (ID_ERRO, CD_ERRO, NM_ERRO, DT_REGISTRO, USUARIO, PROCEDIMENTO)
+        VALUES (seq_id_erro.NEXTVAL, v_codigo_erro, v_mensagem_erro, SYSDATE, USER, 'PRC_CADASTRO_USUARIO');
         
     WHEN VALUE_ERROR THEN
-        DBMS_OUTPUT.PUT_LINE('Erro: Violou a restri��o de tamanho.');
+        DBMS_OUTPUT.PUT_LINE('Erro: Violou a restricao de tamanho.');
+
+        v_codigo_erro := SQLCODE;
+        v_mensagem_erro := SQLERRM;
+        
+        INSERT INTO TB_AS_ERRO (ID_ERRO, CD_ERRO, NM_ERRO, DT_REGISTRO, USUARIO, PROCEDIMENTO)
+        VALUES (seq_id_erro.NEXTVAL, v_codigo_erro, v_mensagem_erro, SYSDATE, USER, 'PRC_CADASTRO_USUARIO');
 
     WHEN OTHERS THEN
-        DBMS_OUTPUT.PUT_LINE('Ocorreu uma execucao: ' || SQLERRM);
+        DBMS_OUTPUT.PUT_LINE('Ocorreu um erro: ' || SQLERRM);
+
+        v_codigo_erro := SQLCODE;
+        v_mensagem_erro := SQLERRM;
+        
+        INSERT INTO TB_AS_ERRO (ID_ERRO, CD_ERRO, NM_ERRO, DT_REGISTRO, USUARIO, PROCEDIMENTO)
+        VALUES (seq_id_erro.NEXTVAL, v_codigo_erro, v_mensagem_erro, SYSDATE, USER, 'PRC_CADASTRO_USUARIO');
 END;
 
 -- Exemplos de insercoes:
@@ -83,6 +111,10 @@ CREATE OR REPLACE PROCEDURE PRC_CADASTRO_LOCAL (
 ) IS
 
     v_verificaUsuario NUMBER;
+
+    v_codigo_erro NUMBER;
+    v_mensagem_erro VARCHAR2(250);
+
 BEGIN 
 
     SELECT COUNT(*)
@@ -91,7 +123,7 @@ BEGIN
     WHERE ID_USUARIO = p_id_usuario;
     
     IF v_verificaUsuario = 0 THEN
-        RAISE_APPLICATION_ERROR(-20005, 'Usu�rio n�o encontrado.');
+        RAISE_APPLICATION_ERROR(-20005, 'Usuario nao encontrado.');
     END IF;
         
 
@@ -101,16 +133,40 @@ BEGIN
 EXCEPTION
 
     WHEN DUP_VAL_ON_INDEX THEN
-        DBMS_OUTPUT.PUT_LINE('Erro: Valor duplicado em coluna �nica.');
+        DBMS_OUTPUT.PUT_LINE('Erro: Valor duplicado em coluna unica.');
+
+        v_codigo_erro := SQLCODE;
+        v_mensagem_erro := SQLERRM;
+        
+        INSERT INTO TB_AS_ERRO (ID_ERRO, CD_ERRO, NM_ERRO, DT_REGISTRO, USUARIO, PROCEDIMENTO)
+        VALUES (seq_id_erro.NEXTVAL, v_codigo_erro, v_mensagem_erro, SYSDATE, USER, 'PRC_CADASTRO_LOCAL');
         
     WHEN NO_DATA_FOUND THEN
-        DBMS_OUTPUT.PUT_LINE('Erro: Chave estrangeira n�o encontrada.');
+        DBMS_OUTPUT.PUT_LINE('Erro: Chave estrangeira nao encontrada.');
+
+        v_codigo_erro := SQLCODE;
+        v_mensagem_erro := SQLERRM;
+        
+        INSERT INTO TB_AS_ERRO (ID_ERRO, CD_ERRO, NM_ERRO, DT_REGISTRO, USUARIO, PROCEDIMENTO)
+        VALUES (seq_id_erro.NEXTVAL, v_codigo_erro, v_mensagem_erro, SYSDATE, USER, 'PRC_CADASTRO_LOCAL');
         
     WHEN VALUE_ERROR THEN
-        DBMS_OUTPUT.PUT_LINE('Erro: Violou a restri��o de tamanho.');
+        DBMS_OUTPUT.PUT_LINE('Erro: Violou a restricao de tamanho.');
+
+        v_codigo_erro := SQLCODE;
+        v_mensagem_erro := SQLERRM;
+        
+        INSERT INTO TB_AS_ERRO (ID_ERRO, CD_ERRO, NM_ERRO, DT_REGISTRO, USUARIO, PROCEDIMENTO)
+        VALUES (seq_id_erro.NEXTVAL, v_codigo_erro, v_mensagem_erro, SYSDATE, USER, 'PRC_CADASTRO_LOCAL');
 
     WHEN OTHERS THEN
-        DBMS_OUTPUT.PUT_LINE('Ocorreu uma execucao: ' || SQLERRM);
+        DBMS_OUTPUT.PUT_LINE('Ocorreu um erro: ' || SQLERRM);
+
+        v_codigo_erro := SQLCODE;
+        v_mensagem_erro := SQLERRM;
+        
+        INSERT INTO TB_AS_ERRO (ID_ERRO, CD_ERRO, NM_ERRO, DT_REGISTRO, USUARIO, PROCEDIMENTO)
+        VALUES (seq_id_erro.NEXTVAL, v_codigo_erro, v_mensagem_erro, SYSDATE, USER, 'PRC_CADASTRO_LOCAL');
 END;
 
 -- Exemplo
@@ -135,6 +191,9 @@ CREATE OR REPLACE PROCEDURE PRC_CADASTRO_ANALISE (
     v_verificaStatus NUMBER;
     v_verificaPlanta NUMBER;
     
+    v_codigo_erro NUMBER;
+    v_mensagem_erro VARCHAR2(250);
+    
 BEGIN 
 
     SELECT COUNT(*)
@@ -143,7 +202,7 @@ BEGIN
     WHERE ID_LOCAL = p_id_local;
     
     IF v_verificaLocal = 0 THEN
-        RAISE_APPLICATION_ERROR(-20006, 'Local n�o encontrado.');
+        RAISE_APPLICATION_ERROR(-20006, 'Local nao encontrado.');
     END IF;
     
     
@@ -153,7 +212,7 @@ BEGIN
     WHERE ID_STATUS = p_id_status;
     
     IF v_verificaStatus = 0 THEN
-        RAISE_APPLICATION_ERROR(-20007, 'Status n�o encontrado.');
+        RAISE_APPLICATION_ERROR(-20007, 'Status nao encontrado.');
     END IF;
     
     SELECT COUNT(*)
@@ -162,7 +221,7 @@ BEGIN
     WHERE ID_PLANTA = p_id_planta;
     
     IF v_verificaPlanta = 0 THEN
-        RAISE_APPLICATION_ERROR(-20008, 'Planta n�o encontrado.');
+        RAISE_APPLICATION_ERROR(-20008, 'Planta nao encontrado.');
     END IF;
     
     
@@ -178,22 +237,48 @@ BEGIN
     
 EXCEPTION
 
+    
+
     WHEN DUP_VAL_ON_INDEX THEN
-        DBMS_OUTPUT.PUT_LINE('Erro: Valor duplicado em coluna �nica.');
+        DBMS_OUTPUT.PUT_LINE('Erro: Valor duplicado em coluna unica.');
+        
+        v_codigo_erro := SQLCODE;
+        v_mensagem_erro := SQLERRM;
+        
+        INSERT INTO TB_AS_ERRO (ID_ERRO, CD_ERRO, NM_ERRO, DT_REGISTRO, USUARIO, PROCEDIMENTO)
+        VALUES (seq_id_erro.NEXTVAL, v_codigo_erro, v_mensagem_erro, SYSDATE, USER, 'PRC_CADASTRO_ANALISE');
         
     WHEN NO_DATA_FOUND THEN
-        DBMS_OUTPUT.PUT_LINE('Erro: Chave estrangeira n�o encontrada.');
+        DBMS_OUTPUT.PUT_LINE('Erro: Chave estrangeira nao encontrada.');
+        
+        v_codigo_erro := SQLCODE;
+        v_mensagem_erro := SQLERRM;
+        
+        INSERT INTO TB_AS_ERRO (ID_ERRO, CD_ERRO, NM_ERRO, DT_REGISTRO, USUARIO, PROCEDIMENTO)
+        VALUES (seq_id_erro.NEXTVAL, v_codigo_erro, v_mensagem_erro, SYSDATE, USER, 'PRC_CADASTRO_ANALISE');
         
     WHEN VALUE_ERROR THEN
-        DBMS_OUTPUT.PUT_LINE('Erro: Violou a restri��o de tamanho.');
+        DBMS_OUTPUT.PUT_LINE('Erro: Violou a restricao de tamanho.');
+        
+        v_codigo_erro := SQLCODE;
+        v_mensagem_erro := SQLERRM;
+        
+        INSERT INTO TB_AS_ERRO (ID_ERRO, CD_ERRO, NM_ERRO, DT_REGISTRO, USUARIO, PROCEDIMENTO)
+        VALUES (seq_id_erro.NEXTVAL, v_codigo_erro, v_mensagem_erro, SYSDATE, USER, 'PRC_CADASTRO_ANALISE');
 
     WHEN OTHERS THEN
-        DBMS_OUTPUT.PUT_LINE('Ocorreu uma execucao: ' || SQLERRM);
+        DBMS_OUTPUT.PUT_LINE('Ocorreu um erro: ' || SQLERRM);
+        
+        v_codigo_erro := SQLCODE;
+        v_mensagem_erro := SQLERRM;
+        
+        INSERT INTO TB_AS_ERRO (ID_ERRO, CD_ERRO, NM_ERRO, DT_REGISTRO, USUARIO, PROCEDIMENTO)
+        VALUES (seq_id_erro.NEXTVAL, v_codigo_erro, v_mensagem_erro, SYSDATE, USER, 'PRC_CADASTRO_ANALISE');
 
 END;
 
 -- Exemplo
 
-EXEC PRC_CADASTRO_ANALISE(5, 5, 5, 'planta.png', 'A planta est� com folhas amareladas.', 'Para resolver folhas amareladas em uma planta, verifique a rega.');
+EXEC PRC_CADASTRO_ANALISE(5, 5, 5, 'planta.png', 'A planta esta com folhas amareladas.', 'Para resolver folhas amareladas em uma planta, verifique a rega.');
 
 

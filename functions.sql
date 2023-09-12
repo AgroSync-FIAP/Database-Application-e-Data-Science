@@ -1,3 +1,5 @@
+SET SERVEROUTPUT ON;
+
 -- Funcaoo para retornar o porcentual de analises com o valor do parametro passado
 -- referente ao total de analises.
 
@@ -10,6 +12,9 @@ IS
     v_total NUMBER;
     v_porStatus NUMBER;
     v_resultado NUMBER;
+
+    v_codigo_erro NUMBER;
+    v_mensagem_erro VARCHAR2(250);
 
 BEGIN
 
@@ -39,10 +44,24 @@ EXCEPTION
 
     WHEN NO_DATA_FOUND THEN
         DBMS_OUTPUT.PUT_LINE('Nenhuma solucao encontrada para o problema: ' || p_status);
+
+        v_codigo_erro := SQLCODE;
+        v_mensagem_erro := SQLERRM;
+        
+        INSERT INTO TB_AS_ERRO (ID_ERRO, CD_ERRO, NM_ERRO, DT_REGISTRO, USUARIO, PROCEDIMENTO)
+        VALUES (seq_id_erro.NEXTVAL, v_codigo_erro, v_mensagem_erro, SYSDATE, USER, 'FNC_PORCENT_ANALISES');
+
         RETURN 0;
 
     WHEN OTHERS THEN
-        DBMS_OUTPUT.PUT_LINE('Ocorreu uma execucao: ' || SQLERRM);
+        DBMS_OUTPUT.PUT_LINE('Ocorreu um erro: ' || SQLERRM);
+
+        v_codigo_erro := SQLCODE;
+        v_mensagem_erro := SQLERRM;
+        
+        INSERT INTO TB_AS_ERRO (ID_ERRO, CD_ERRO, NM_ERRO, DT_REGISTRO, USUARIO, PROCEDIMENTO)
+        VALUES (seq_id_erro.NEXTVAL, v_codigo_erro, v_mensagem_erro, SYSDATE, USER, 'FNC_PORCENT_ANALISES');
+
         RETURN NULL;
     
 END;
@@ -52,7 +71,7 @@ END;
 DECLARE
 
     v_resultado NUMBER;
-    v_status VARCHAR2(50) := 'ANALISANDO';
+    v_status VARCHAR2(50) := 'ANASANDO';
 
 BEGIN
 
@@ -76,6 +95,9 @@ RETURN VARCHAR2
 IS
     
     v_retorno VARCHAR2(500);
+
+    v_codigo_erro NUMBER;
+    v_mensagem_erro VARCHAR2(250);
     
 BEGIN
 
@@ -92,10 +114,24 @@ EXCEPTION
 
     WHEN NO_DATA_FOUND THEN
         DBMS_OUTPUT.PUT_LINE('Nenhuma solucao encontrada para o problema: ' || p_problema);
+
+        v_codigo_erro := SQLCODE;
+        v_mensagem_erro := SQLERRM;
+        
+        INSERT INTO TB_AS_ERRO (ID_ERRO, CD_ERRO, NM_ERRO, DT_REGISTRO, USUARIO, PROCEDIMENTO)
+        VALUES (seq_id_erro.NEXTVAL, v_codigo_erro, v_mensagem_erro, SYSDATE, USER, 'FNC_RETORNA_SOLUCAO');
+
         RETURN NULL;
 
     WHEN OTHERS THEN
-        DBMS_OUTPUT.PUT_LINE('Ocorreu uma execucao: ' || SQLERRM);
+        DBMS_OUTPUT.PUT_LINE('Ocorreu um erro: ' || SQLERRM);
+
+        v_codigo_erro := SQLCODE;
+        v_mensagem_erro := SQLERRM;
+        
+        INSERT INTO TB_AS_ERRO (ID_ERRO, CD_ERRO, NM_ERRO, DT_REGISTRO, USUARIO, PROCEDIMENTO)
+        VALUES (seq_id_erro.NEXTVAL, v_codigo_erro, v_mensagem_erro, SYSDATE, USER, 'FNC_RETORNA_SOLUCAO');
+
         RETURN NULL;
 
 END;

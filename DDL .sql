@@ -7,6 +7,7 @@ DROP TABLE tb_as_usuario CASCADE CONSTRAINTS;
 DROP TABLE tb_as_planta CASCADE CONSTRAINTS;
 DROP TABLE tb_as_status CASCADE CONSTRAINTS;
 DROP TABLE tb_as_auditoria CASCADE CONSTRAINTS;
+DROP TABLE TB_AS_ERRO;
 
 DROP SEQUENCE seq_id_analise;
 DROP SEQUENCE seq_id_local;
@@ -15,6 +16,7 @@ DROP SEQUENCE seq_id_usuario;
 DROP SEQUENCE seq_id_planta;
 DROP SEQUENCE seq_id_status;
 DROP SEQUENCE seq_id_registro;
+DROP SEQUENCE seq_id_erro;
 
 -- Criação de tabelas e sequences
 
@@ -243,6 +245,15 @@ CREATE TABLE tb_as_auditoria (
     tabela_afetada VARCHAR2(50)
 );
 
+CREATE TABLE TB_AS_ERRO (
+    ID_ERRO NUMBER(5) NOT NULL,
+    CD_ERRO NUMBER(10) NOT NULL,
+    NM_ERRO VARCHAR2(300) NOT NULL,
+    DT_REGISTRO DATE NOT NULL,
+    USUARIO VARCHAR2(100) NOT NULL,
+    PROCEDIMENTO VARCHAR2(50) NOT NULL
+);
+
 CREATE SEQUENCE seq_id_analise
     START WITH 1
     INCREMENT BY 1;
@@ -268,6 +279,10 @@ CREATE SEQUENCE seq_id_status
     INCREMENT BY 1;
 
 CREATE SEQUENCE seq_id_registro
+    START WITH 1
+    INCREMENT BY 1;
+
+CREATE SEQUENCE seq_id_erro
     START WITH 1
     INCREMENT BY 1;
 
