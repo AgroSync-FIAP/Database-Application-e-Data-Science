@@ -71,12 +71,12 @@ END;
 DECLARE
 
     v_resultado NUMBER;
-    v_status VARCHAR2(50) := 'ANASANDO';
+    v_status VARCHAR2(50) := 'ANALISANDO';
 
 BEGIN
 
     v_resultado := FNC_PORCENT_ANALISES(v_status);
-    DBMS_OUTPUT.PUT_LINE('A porcentagem de analises com o status ' || v_status || ' e: ' || v_resultado);
+    DBMS_OUTPUT.PUT_LINE('A porcentagem de analises com o status ' || v_status || ' e: ' || ROUND(v_resultado, 2) || '%');
 
 END;
 
